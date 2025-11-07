@@ -19,13 +19,8 @@ export default function LayoutShell({ children }) {
       padding="md"
     >
       <AppShell.Header>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          hiddenFrom="sm"
-          size="sm"
-        />
-        <HeaderBar />
+        
+        <HeaderBar opened={opened} toggle={toggle} />
       </AppShell.Header>
 
       <AppShell.Navbar>

@@ -1,8 +1,8 @@
 'use client';
 
-import { Group, Text, Avatar, Stack, Image } from '@mantine/core';
+import { Group, Text, Avatar, Stack, Image, Burger } from '@mantine/core';
 
-export function HeaderBar() {
+export function HeaderBar( {opened, toggle} ) {
   return (
     <Group
       justify="space-between"
@@ -17,7 +17,13 @@ export function HeaderBar() {
     >
       {/* Left section: Logo + Title */}
       <Group gap="xs" wrap="nowrap">
-        <Avatar src="newLogo-1.png" radius="xl" color="dark" />
+        <Avatar visibleFrom="sm" src="../images/newLogo-1.png" radius="xl" color="dark" />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          hiddenFrom="sm"
+          size="sm"
+        />
         <Stack gap="0">
           <Text size="lg" fw={700} style={{ textTransform: 'uppercase' }} >
             POISUM Portal
