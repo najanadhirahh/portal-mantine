@@ -1,5 +1,5 @@
 import { Card, Text, Button, TextInput } from '@mantine/core';
-import { Breadcrumb } from '../components/Breadcrumb';
+import { Breadcrumb } from '../../components/Breadcrumb';
 
 export default function AccountPage() {
   return (

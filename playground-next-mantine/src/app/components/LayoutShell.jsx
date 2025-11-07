@@ -19,7 +19,6 @@ export default function LayoutShell({ children }) {
       padding="md"
     >
       <AppShell.Header>
-        
         <HeaderBar opened={opened} toggle={toggle} />
       </AppShell.Header>
 

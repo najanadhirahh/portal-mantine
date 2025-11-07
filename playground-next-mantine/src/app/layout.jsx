@@ -1,7 +1,6 @@
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from './theme';
-import LayoutShell from './components/LayoutShell';
 
 export const metadata = {
   title: 'Poisum Portal',
@@ -16,7 +15,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <MantineProvider theme={theme}>
-          <LayoutShell>{children}</LayoutShell>
+          {children}
         </MantineProvider>
       </body>
     </html>
