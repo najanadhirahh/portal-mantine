@@ -29,7 +29,7 @@ export function HeaderBar( {opened, toggle} ) {
             POISUM Portal
           </Text>
           <Text size="xs" fw={500} c={'dimmed'} align={'right'}>
-            Version 1.1.0
+            Version 1.0.0
           </Text>
         </Stack>
       </Group>

@@ -1,11 +1,10 @@
 import { Card, Text, Button, TextInput } from '@mantine/core';
+import { Breadcrumb } from '../components/Breadcrumb';
 
 export default function AccountPage() {
   return (
     <div>
-      <Text fw={700} size="xl" mb="md" c="#183021">
-        GLOBAL SETTING
-      </Text>
+      <Breadcrumb title={'Global Setting'} />
       <Card shadow="md" p="lg" radius="md" withBorder>
         <Text fw={600} mb={5}>
           Team Identity

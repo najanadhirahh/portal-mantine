@@ -1,5 +1,5 @@
-import { ContentCard } from './components/ContentCard';
+import { Breadcrumb } from './components/Breadcrumb';
 
 export default function HomePage() {
-  return <ContentCard />;
+  return <Breadcrumb title={'Dashboard'} />;
 }

@@ -9,11 +9,15 @@ export function Sidebar() {
   const pathname = usePathname();
 
   const links = [
-    { label: 'Home', href: '/', icon: Home },
-    { label: 'Account', href: '/account', icon: UserCog },
+    { label: 'Dashboard', href: '/', icon: Home },
+    { label: 'Profile', href: '/profile', icon: UserCog },
   ];
 
-  const bottomLinks = [{ label: 'Logout', href: '/logout', icon: LogOut }];
+  const bottomLinks = [
+    { label: 'Account', href: '/account', icon: UserCog },
+    { label: 'Logout', href: '/logout', icon: LogOut },
+
+  ];
 
   return (
     <div
