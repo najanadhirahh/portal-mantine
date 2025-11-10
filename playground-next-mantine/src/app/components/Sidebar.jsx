@@ -15,7 +15,7 @@ export function Sidebar() {
 
   const bottomLinks = [
     { label: 'Account', href: '/account', icon: UserCog },
-    { label: 'Logout', href: '/logout', icon: LogOut },
+    { label: 'Logout', href: '/signin', icon: LogOut },
 
   ];
 
