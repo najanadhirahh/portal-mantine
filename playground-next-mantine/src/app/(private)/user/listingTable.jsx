@@ -6,6 +6,7 @@ import { showNotification } from '@mantine/notifications';
 import { useEffect, useState } from 'react';
 import { DataTable } from 'mantine-datatable';
 import { useTableFilters } from '@/hooks/useTableFilters';
+import sortBy from 'lodash/sortBy';
 
 const PAGE_SIZES = [10, 15, 20];
 
@@ -27,7 +28,11 @@ export function ListignTable() {
         setRecords(userData.slice(from, to));
     }, [page, pageSize]);
 
-    
+     useEffect(() => {
+        const data = sortBy(userData, sortStatus.columnAccessor);
+        setRecords(sortStatus.direction === 'desc' ? data.reverse() : data);
+    }, [sortStatus]);
+
         const columns = [
         {
             accessor: 'id',
@@ -156,6 +161,7 @@ export function ListignTable() {
     return (
         <DataTable
             height={500}
+            textSelectionDisabled
             withTableBorder
             borderRadius="sm"
             withColumnBorders
