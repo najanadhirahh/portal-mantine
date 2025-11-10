@@ -7,13 +7,22 @@ export default function PublicLayout({ children }) {
       <BackgroundImage
         src="images/bg1.png"
         alt="Background"
-        style={{ width: '100%', height: '100vh', objectFit: 'cover' }}
+        style={{
+          width: '100%',
+          height: '100vh',
+          objectFit: 'cover',
+          display: 'flex',               // ✅ Make BackgroundImage a flex container
+          alignItems: 'center',          // ✅ Vertical centering
+          justifyContent: 'center',      // ✅ Horizontal centering
+        }}
       >
-        <Stack justify="center" align="center" w={{ base: "90%", md: "100%" }} style={{ height: '100%' }}>
-        <Container style={{ minHeight: '100vh', paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <Container
+          style={{
+            maxWidth: '1100px',
+          }}
+        >
           {children}
         </Container>
-        </Stack>
       </BackgroundImage>
     </Box>
 

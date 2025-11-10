@@ -12,6 +12,7 @@ import {
   Center,
   Button,
   TextInput,
+  PasswordInput,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useRouter } from 'next/navigation';
@@ -36,6 +37,7 @@ export default function SigninPage({
     <>
       {/* Outer container converted from Box */}
       <Flex
+        display="flex"
         align="center"
         justify="center"
         w={{ base: "100%", md: "1100px" }}
@@ -44,9 +46,8 @@ export default function SigninPage({
           overflowY: "auto",
           borderRadius: 15,
           padding: "2rem",
-          // minHeight: "50vh",
-          height: "550px",
-          // marginTop: "8rem",
+          height: "650px",
+          boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
         }}
       >
         {/* Inner flex layout (logo + form) */}
@@ -56,6 +57,7 @@ export default function SigninPage({
           justify="space-around"
           w="100%"
           gap="xl"
+          px={{base: "1rem", md:"5rem"}}
         >
           {/* ======================== */}
           {/* Logo Section (Mantine Box) */}
@@ -63,22 +65,21 @@ export default function SigninPage({
           <Box
             pos="relative"
             p={{ base: "sm", sm: "md", md: "lg" }}
-            maw={800}
             mx="auto"
-            w={{ base: 180, sm: 220, md: 250 }}
-            // h={{ base: 180, sm: 220, md: 650 }}
+            maw={{ base: 300, sm: 350, md: 400 }}
+            w={{ base: 120, sm: 160, md: 200, lg: 250 }}
             style={{ borderRadius: 15 }}
           >
             <Box
               component="img"
               src="../images/newLogo.png"
               alt="Logo"
+              w={{ base: 120, sm: 160, md: 200, lg: 250 }}
               sx={(theme) => ({
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: 200, // default
                 height: 'auto',
                 zIndex: 0,
               })}
@@ -89,9 +90,10 @@ export default function SigninPage({
           {/* Form Section */}
           {/* ======================== */}
           <Paper
-            p="xl"
+            px="xl"
+            py="xl"
             radius="md"
-            w={{ base: "100%", sm: "90%", md: "480px" }}
+            w={{ base: "100%", sm: "90%", md: "380px" }}
             bg="#39483f43"
           >
             <Title
@@ -101,7 +103,7 @@ export default function SigninPage({
               tt="uppercase"
               c="white"
               fw={600}
-              fz="h1"
+              fz="h3"
             >
               POISUM Portal
             </Title>
@@ -114,12 +116,35 @@ export default function SigninPage({
             <Box component="form" onSubmit={handleSubmit} noValidate>
               <Stack gap="md" w="100%">
                 {/* Inputs, Password fields, and Buttons will be replaced next */}
-                <TextInput label="Email" placeholder="you@example.com" />
-                <TextInput label="Password" type="password" />
+                <TextInput
+                  size="md"
+                  radius="md"
+                  label="Email"
+                  withAsterisk
+                  placeholder="your@email.com"
+                  c="white"
+                // key={form.key('email')}
+                // {...form.getInputProps('email')}
+                />
+                <PasswordInput
+                  size="md"
+                  radius="md"
+                  label="Password"
+                  withAsterisk
+                  // error="Please insert your password"
+                  placeholder="Enter your password"
+                  c="white"
+                />
                 {/* --- Keep logic placeholders here --- */}
                 <Button
                   fullWidth
+                  tt="uppercase"
                   mt="md"
+                  size="md"
+                  radius="sm"
+                  bg="#39493F"
+                  c="white"
+                  bd="#39493F"
                   onClick={() => router.push('/dashboard')}  // ✅ navigate properly
                 >
                   Sign In
@@ -134,6 +159,7 @@ export default function SigninPage({
                   accordance with the{" "}
                   <Text
                     span
+                    fz={11}
                     td="underline"
                     c="black"
                     style={{ cursor: "pointer" }}
@@ -144,6 +170,7 @@ export default function SigninPage({
                   and{" "}
                   <Text
                     span
+                    fz={11}
                     td="underline"
                     c="black"
                     style={{ cursor: "pointer" }}
