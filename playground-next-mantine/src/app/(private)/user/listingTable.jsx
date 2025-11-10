@@ -1,7 +1,6 @@
 'use client';
 
-import { genderMap, roleMap } from '@/app/components/data/masterData';
-import { userData } from '@/app/components/data/userRows';
+import { genderMap, roleMap, userData } from '@/app/components/data/userRows';
 import { Box, Text } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
 import { useEffect, useState } from 'react';
