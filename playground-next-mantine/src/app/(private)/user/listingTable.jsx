@@ -5,7 +5,7 @@ import { Box, Text } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
 import { useEffect, useState } from 'react';
 import { DataTable } from 'mantine-datatable';
-import { useTableFilters } from '@/hooks/useTableFilters';
+import { useTableFilters } from '@/hooks/useTableFilter';
 import sortBy from 'lodash/sortBy';
 
 const PAGE_SIZES = [10, 15, 20];
