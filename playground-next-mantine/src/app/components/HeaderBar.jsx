@@ -37,10 +37,10 @@ export function HeaderBar( {opened, toggle} ) {
       {/* Right section: Welcome message */}
       <Group gap="xs" wrap="nowrap">
         <Text size="sm" fw={500} hiddenFrom="md">
-          Hi, Mandy
+          Hi, Naja
         </Text>
         <Text size="sm" fw={500} visibleFrom="md">
-          Mandy, Welcome To Poisum Portal
+          Naja, Welcome To Poisum Portal
         </Text>
         <Avatar radius="xl" color="dark">
           P
